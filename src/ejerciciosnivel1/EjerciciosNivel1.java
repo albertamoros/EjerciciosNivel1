@@ -11,11 +11,23 @@ package ejerciciosnivel1;
  */
 public class EjerciciosNivel1 {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+    //declaro un array de integers
+    int[] listaNumeros = {33, 31, 200, 20, 5, 99};
+
+    public int maximo(int[] lista) {
+        int auxiliar = lista[0]; //el maximo va a ser el primer numero del array
+        for (int i = 0; i < lista.length; i++) {
+            if (auxiliar < lista[i]) {
+                auxiliar = lista[i];
+            }
+        }
+        return auxiliar;
     }
-    
+
+    public static void main(String[] args) {
+        EjerciciosNivel1 ejercicio = new EjerciciosNivel1();
+        
+        System.out.println("el maximo es: " + ejercicio.maximo(ejercicio.listaNumeros));
+    }
+
 }
